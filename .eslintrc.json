@@ -1,0 +1,39 @@
+{
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [".vue",".js"]
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/recommended",
+    "plugin:prettier/recommended"
+
+  ],
+  "rules": {
+    "arrow-parens": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"],
+    "vue/attributes-order": "off",
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/explicit-function-return-type": ["error", {
+      "allowExpressions": true,
+      "allowHigherOrderFunctions": true,
+      "allowTypedFunctionExpressions": true
+    }]
+  },
+  "overrides": [
+    {
+      "files": "**/*.+(ts|tsx)",
+      "rules": {
+        "indent": "off",
+        "@typescript-eslint/indent": "off"
+      }
+    }
+  ]
+}

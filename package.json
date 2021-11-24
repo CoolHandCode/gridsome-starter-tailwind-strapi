@@ -1,0 +1,46 @@
+{
+    "name": "gridsome-strapi-tailwind-starter",
+    "private": true,
+    "version": "0.1.0",
+    "scripts": {
+        "build": "gridsome build",
+        "develop": "gridsome develop",
+        "explore": "gridsome explore",
+        "lint:check": "eslint --ext .ts,.vue ./src",
+        "lint:fix": "yarn lint:check --fix"
+    },
+    "dependencies": {
+        "axios": "0.24.0",
+        "gridsome": "^0.7.23"
+    },
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "4.0.3",
+        "@gridsome/source-graphql": "0.1.0",
+        "@tailwindcss/forms": "0.3.4",
+        "@tailwindcss/postcss7-compat": "^2.2.16",
+        "@tailwindcss/typography": "^0.4.1",
+        "@typescript-eslint/eslint-plugin": "5.3.1",
+        "@typescript-eslint/parser": "5.3.1",
+        "autoprefixer": "10.3.7",
+        "eslint": "8.2.0",
+        "eslint-config-prettier": "8.3.0",
+        "eslint-config-standard": "16.0.3",
+        "eslint-plugin-gridsome": "1.6.2",
+        "eslint-plugin-prettier": "4.0.0",
+        "eslint-plugin-promise": "5.1.1",
+        "eslint-plugin-standard": "5.0.0",
+        "eslint-plugin-vue": "8.0.3",
+        "gridsome-plugin-tailwindcss": "4.1.1",
+        "gridsome-plugin-typescript": "0.4.0",
+        "gridsome-source-rest": "1.0.11",
+        "install": "0.13.0",
+        "postcss": "^7",
+        "postcss-preset-env": "6.7.0",
+        "prettier": "2.4.1",
+        "sass-loader": "^12.2.0",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+        "ts-loader": "~8.2.0",
+        "typescript": "4.4.4",
+        "vue-svg-loader": "0.16.0"
+    }
+}
