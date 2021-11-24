@@ -1,14 +1,18 @@
-# Taiwind and Typescript starter for Gridsome
+# Strapi and Tailwind Starter Gridsome Blog
 
-This is the project you get when you run `gridsome create new-project`.
+Gridsome starter for creating an internationalized blog using Strapi CMS and Tailwind CSS
 
-### 1. Install Gridsome CLI tool if you don't have
+![screenshot image](/screenshot.png)
 
-`npm install --global @gridsome/cli`
+This starter comes setup pointing to a hosted Strapi installation. Simply change the variable GRIDSOME_STRAPI_URL in the .env files to point to your own Strapi CMS URI.
 
-### 2. Create a Gridsome project
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+## Features
+
+- Typescript support
+- ESLint and Prettier
+- Strapi CMS with locales
+- Tailwind CSS
+
+
+Enjoy!
