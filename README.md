@@ -1,0 +1,1 @@
+# gridsome-starter-tailwind-strapi
