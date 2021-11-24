@@ -9,17 +9,10 @@ This starter comes setup pointing to a hosted Strapi installation. Simply change
 
 ## Features
 
-- 2 Typescript support
-- 2 ESLint and Prettier
-- 3 Strapi CMS with locales
-- 3 Tailwind CSS
-
-Pages:
-
-- "/" to display every articles
-- "/article/:id" to display one article
-- "/category/:id" display articles depending on the category
-
+- Typescript support
+- ESLint and Prettier
+- Strapi CMS with locales
+- Tailwind CSS
 
 
 Enjoy!
