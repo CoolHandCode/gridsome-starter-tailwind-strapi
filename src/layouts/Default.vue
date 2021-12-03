@@ -13,5 +13,3 @@ query {
   }
 }
 </static-query>
-
-<script type="ts">

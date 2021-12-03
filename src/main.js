@@ -12,11 +12,21 @@ export default function(Vue, {
     Vue.component('Layout', DefaultLayout)
     Vue.use(Store)
     head.link.push({
+        as: 'font',
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Staatliches',
     }, {
+        as: 'font',
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Roboto',
+    }, {
+        as: 'font',
+        rel: 'preload',
+        href: 'https://fonts.googleapis.com/css2?family=Roboto',
+    }, {
+        as: 'font',
+        rel: 'preload',
+        href: 'https://fonts.googleapis.com/css2?family=Staatliches',
     })
 
 }

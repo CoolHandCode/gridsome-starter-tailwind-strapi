@@ -9,19 +9,23 @@ module.exports = async function(api) {
 
     api.loadSource(async(store) => {
 
-    })
-
+        })
+        // Create a page for each locale
     locales.forEach(async l => {
 
         await api.createPages(async({ graphql, createPage }) => {
             const { data } = await graphql(` {
-  
             strapi {
             
                 articles(locale: "${l.code}") {
                     slug
-                    id
-                    description
+                    image {
+                        url
+                    }
+                    category { 
+                        title
+                    }
+                    
                     
                 }
                 categories(locale: "${l.code}") {
@@ -32,8 +36,6 @@ module.exports = async function(api) {
         }
     
          `);
-            console.log(data.strapi.articles)
-                // somehow we need to pass in the ids of the other locales
             const articles = data.strapi.articles;
             createPage({
                 path: `/${l.code}`,

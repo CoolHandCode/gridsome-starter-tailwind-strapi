@@ -3,7 +3,7 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-
+console.log(process.env.GRIDSOME_STRAPI_URL)
 module.exports = {
     chainWebpack: config => {
         const svgRule = config.module.rule('svg')
@@ -24,18 +24,17 @@ module.exports = {
         {
             use: "gridsome-plugin-tailwindcss",
 
-            // these options are optional, as they are copies of the default values...
             options: {
                 tailwindConfig: './tailwind.config.js',
                 presetEnvConfig: {},
                 shouldImport: false,
-                shouldTimeTravel: true
+                shouldTimeTravel: false
             }
         },
         {
             use: '@gridsome/source-graphql',
             options: {
-                url: (process.env.GRIDSOME_STRAPI_URL || 'http://localhost:1337') + '/graphql',
+                url: (process.env.GRIDSOME_STRAPI_URL || 'https://strapi1.digitalstate.co.uk') + '/graphql',
                 queryLimit: 50,
                 fieldName: 'strapi',
                 typeName: 'strapiTypes',
@@ -47,7 +46,7 @@ module.exports = {
             options: {
                 debug: false,
                 axiosConfig: undefined,
-                endpoint: (process.env.GRIDSOME_STRAPI_URL || 'http://localhost:1337') + '/i18n/locales',
+                endpoint: (process.env.GRIDSOME_STRAPI_URL || 'https://strapi1.digitalstate.co.uk') + '/i18n/locales',
                 typeName: "Locale",
                 isStatic: false,
                 isCollection: true,
@@ -58,8 +57,5 @@ module.exports = {
             use: 'gridsome-plugin-typescript',
         },
     ],
-    templates: {
 
-
-    },
 }
