@@ -3,7 +3,9 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-console.log(process.env.GRIDSOME_STRAPI_URL)
+const tailwind = require("tailwindcss");
+const postcssPlugins = [tailwind()];
+
 module.exports = {
     chainWebpack: config => {
         const svgRule = config.module.rule('svg')
@@ -18,7 +20,13 @@ module.exports = {
     transformers: {
 
     },
-
+    css: {
+        loaderOptions: {
+            postcss: {
+                plugins: postcssPlugins,
+            },
+        },
+    },
     plugins: [
 
         {
