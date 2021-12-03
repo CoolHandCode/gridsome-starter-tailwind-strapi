@@ -1,5 +1,4 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import Vue from 'vue'
 import * as locales from '../utils/locales'
 
 interface Store {

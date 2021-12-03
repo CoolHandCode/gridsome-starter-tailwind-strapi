@@ -6,10 +6,12 @@
         items-center
         justify-between
         w-full
+        bg-opacity-70
         py-4
         md:py-0
         px-4
-        text-lg text-white
+        bg-gray-300
+        text-lg text-black
         bg-clip-padding
         backdrop-filter backdrop-blur-xl
       "
@@ -64,7 +66,7 @@ export default {
     }
   },
   mounted() {
-    // Set initial locale and languages title from localstorage
+    // Set initial locale and languages title from browser localstorage
     this.$store.set('locale',localStorage.getItem('locale') || 'en')
     this.$store.set('languages',localStorage.getItem('languages') || 'Languages')
 

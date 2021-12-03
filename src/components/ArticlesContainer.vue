@@ -4,7 +4,7 @@
       class="
         bg-clip-padding
         backdrop-blur-sm backdrop-contrast-10 backdrop-filter
-        bg-opacity-60
+        bg-opacity-70
         border border-gray-400
         bg-gray-300
         grid
@@ -16,8 +16,8 @@
       "
     >
       <div class="p-3 lg:col-span-4 col-span-2 rounded">
-        <h1 class="font-heading text-6xl lg:text-8xl">
-          {{ $page.strapi.homepage.hero.title }}
+        <h1 class="font-heading uppercase text-6xl text-black lg:text-8xl">
+          {{ title }}
         </h1>
       </div>
 
@@ -33,6 +33,7 @@
 <script>
 import OneColumnArticle from '~/components/OneColumnArticle'
 import TwoColumnArticle from '~/components/TwoColumnArticle'
+import * as locales from '~/utils/locales'
 
 export default {
   components: { OneColumnArticle, TwoColumnArticle },
@@ -44,7 +45,18 @@ export default {
     },
   },
   data() {
-    return {}
+    return {
+      locales,
+      title: '',
+    }
+  },
+  mounted() {
+    this.title = ''
+    locales.forEach((l) => {
+      if (this.$store.state.locale === l.code) {
+        this.title = l.title
+      }
+    })
   },
 }
 </script>
